@@ -1,0 +1,138 @@
+.nav {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  animation: 2s fadein forwards;
+
+  @media(max-width: 1200px) {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  @media(max-width: 800px) {
+    display: none;
+  }
+
+  &__brand {
+    height: 50%;
+    flex: 1;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    width: 33%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+
+    @media(max-width: 1200px) {
+      width: 50%;
+    }
+
+    &__link {
+      color: rgba(white, 0.6);
+      
+      &:hover, 
+      &:focus, 
+      &:active {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    &__item {
+      list-style: none;
+    }
+
+    &__icon {
+      color: rgba(white, 0.6);
+      
+      &:hover, 
+      &:focus, 
+      &:active {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+.mob-nav {
+  z-index: 1;
+  width: 100%;
+  height: 10vh;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 2rem;
+  background: rgba(black, 0.5);
+
+  @media(max-width: 800px) {
+    display: flex;
+  }
+
+  &__brand {
+    z-index: 2;
+    height: 50%;
+    margin-left: .5rem;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__menu {
+    z-index: 2;
+    color: rgba(white, 0.6);
+    margin-right: .5rem;
+  }
+
+  &__x {
+    color: rgba(white, 0.6);
+    margin-right: .5rem;
+    display: none;
+    z-index: 2;
+  }
+
+  &__right {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all .5s;
+    background: #000000;
+    background: linear-gradient(to bottom, #000000, #0c0c0c);
+
+    &__link {
+      color: rgba(white, 0.6);
+      text-decoration: none;
+      font-size: 2.4rem;
+      font-weight: 300;
+
+      &:focus,
+      &:active {
+        text-decoration: none;
+      }
+    }
+
+    &__item {
+      list-style: none;
+      color: rgba(white, 0.6);
+    }
+  }
+}

@@ -12,4 +12,12 @@ html {
 
 body {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.dark-bg {
+  width: 100%;
+  background: black;
+  background: linear-gradient(to bottom black, #0c0c0c);
 }
