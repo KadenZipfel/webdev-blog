@@ -153,3 +153,18 @@ body {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text; }
+
+.article__title {
+  font-weight: 400; }
+
+.article__subtitle {
+  font-weight: 300;
+  font-size: 1.8rem; }
+
+.article__author {
+  color: rgba(0, 0, 0, 0.6); }
+
+.article__img {
+  width: 50%; }
+  .article__img img {
+    width: 100%; }

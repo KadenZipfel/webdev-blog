@@ -14,8 +14,10 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 const indexRoutes = require('./routes/index');
+const adminRoutes = require('./routes/admin');
 
 app.use(indexRoutes);
+app.use('/admin', adminRoutes);
 
 const PORT = 3000 || process.env.PORT
 

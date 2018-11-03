@@ -1,0 +1,27 @@
+.article {
+
+  &__title {
+    font-weight: 400;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
+
+  &__author {
+    color: rgba(black, 0.6);
+  }
+
+  &__img {
+    width: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    
+  }
+}
