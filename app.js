@@ -3,6 +3,8 @@ const keys = require('./keys');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
+const bodyParser = require('body-parser');
+const User = require('./models/User');
 
 const app = express();
 
@@ -14,6 +16,7 @@ db.on('error', console.error.bind(console, 'connection error: '));
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({extended: false}));
 
 // Passport config
 app.use(require('express-session')({
